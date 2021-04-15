@@ -1,0 +1,44 @@
+#!/bin/bash
+### job name
+#PBS -N DeepPavlovCluster
+
+### Not rerunable program
+#PBS -r n
+
+### Send an e-mail when the execution has ended
+#PBS -m ae
+#PBS -M andrea.grendene@studenti.unipd.it
+
+### Redirect standard output and standard error
+#PBS -e localhost:${HOME}/storage/cluster_long/deeppavlov_cluster.err
+#PBS -o localhost:${HOME}/storage/cluster_long/deeppavlov_cluster.out
+
+### Select "cluster_long" queue
+#PBS -q cluster_long
+
+### Number oh hosts (nodes) used by Job and number of processes for node (ppn)
+#PBS -l nodes=1:ppn=1
+
+### Memory that the program will use
+#PBS -l mem=32g
+
+### Max time of execution
+#PBS -l walltime=48:00:00
+
+###
+### Change to work directory
+source anaconda3/bin/activate
+cd ${HOME}/storage/cluster_long
+
+### Some shell commands that print system status before execution
+echo Host execution: `hostname`
+echo Date: `date`
+echo Directory: `pwd`
+echo This job run on the following nodes:
+echo `cat $PBS_NODEFILE`
+echo PBS_WORKDIR=$PBS_WORKDIR
+
+### Execution of the program
+conda activate py37
+### python -c "from deeppavlov import configs, build_model; import os; os.environ['lc-quad_output_path'] = os.path.abspath(os.getcwd()) + '/output/'; kbqa_model = build_model(configs.kbqa.kbqa_cq, download=False); answer = kbqa_model(['What was the population of Somalia in 2009-0-0?']); print(answer)"
+python execute_deeppavlov_model.py
