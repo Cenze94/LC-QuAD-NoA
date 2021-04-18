@@ -38,27 +38,27 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
   - ```
     queries_complete_candidates = []
     ```
-    in "\__call__" function, after the instantiation of the first two lists.
+    in "\_\_call__" function, after the instantiation of the first two lists.
   - ```
     queries_complete_candidates.append([query[1], query[2]])
     ```
-    in "__call__" function, after the instruction "queries_candidates.append(query[1])".
+    in "\_\_call__" function, after the instruction "queries_candidates.append(query[1])".
   - ```
     with open(os.environ['lc-quad_output_path'] + "queries_candidates.txt", "a") as queries_file:
         queries_file.write(str(queries_complete_candidates) + "\n")
     ```
-    in "__call__" function, before the return contained in "query_execute" case.
+    in "\_\_call__" function, before the return contained in "query_execute" case.
   - ```
     if queries_complete_candidates:
         with open(os.environ['lc-quad_output_path'] + "queries_candidates.txt", "a") as queries_file:
             queries_file.write(str(queries_complete_candidates) + "\n")
     ```
-    in "__call__" function, before the final return; this part has been added in case "return_if_found" variable is false.
+    in "\_\_call__" function, before the final return; this part has been added in case "return_if_found" variable is false.
 - "rel_ranking_bert_infer.py" has been modified replacing the instruction
   ```
   answers_with_scores = sorted(answers_with_scores, key=lambda x: x[-1], reverse=True)
   ```
-  of "__call__" function with the code
+  of "\_\_call__" function with the code
   ```
   answers_with_scores_and_indexes = []
   for i, tuple_answer in enumerate(answers_with_scores):
