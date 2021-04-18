@@ -21,7 +21,7 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
                 else:
                     candidate_outputs_list[i][j][z] = str(i) + "§" + str(j) + "§" + str(z) + "|" + answer_component
     ```
-    in "query_parser" function, after the definition of "candidate_outputs_list" variable. Note that appending operation for "candidate_outputs_lists.txt" file should be useless, since the indexes adding in the following part can be used to get directly the candidate query; in any case, it has been reported for completeness.
+    in "query_parser" function, after the definition of "candidate_outputs_list" variable. Note that the appending operation for "candidate_outputs_lists.txt" file should be useless, since the indexes added in the following part can be used to get directly the candidate query; in any case, it has been reported for completeness.
   - ```
     with open(os.environ['lc-quad_output_path'] + "candidate_outputs.txt", "a") as queries_file:
         queries_file.write(str(candidate_outputs) + "\n")
@@ -38,7 +38,7 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
   - ```
     queries_complete_candidates = []
     ```
-    in "__call__" function, after the instantiation of the first two lists.
+    in "\__call__" function, after the instantiation of the first two lists.
   - ```
     queries_complete_candidates.append([query[1], query[2]])
     ```
@@ -47,7 +47,7 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
     with open(os.environ['lc-quad_output_path'] + "queries_candidates.txt", "a") as queries_file:
         queries_file.write(str(queries_complete_candidates) + "\n")
     ```
-    in "__call__" function, before the return of "query_execute" case.
+    in "__call__" function, before the return contained in "query_execute" case.
   - ```
     if queries_complete_candidates:
         with open(os.environ['lc-quad_output_path'] + "queries_candidates.txt", "a") as queries_file:
