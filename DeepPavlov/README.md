@@ -4,13 +4,13 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
 
 - "sparql_queries.json" has been modified because a couple of templates (15 and 18) didn't have the field "define_sorting_order: false", which caused errors if the predicted template of one of the input questions was one of them.
 - "query_generator.py" has been modified adding the following code:
-  - '''
+  - ```
     import os
     with open(os.environ['lc-quad_output_path'] + "queries_templates.txt", "a") as queries_file:
         queries_file.write(str(query) + "\n")
-    '''
+    ```
     in "query_parser" function, after the definition of "query" variable.
-  - '''
+  - ```
     with open(os.environ['lc-quad_output_path'] + "candidate_outputs_lists.txt", "a") as queries_file:
         queries_file.write(str(candidate_outputs_list) + "\n")
     for i, candidate_answers in enumerate(candidate_outputs_list):
@@ -20,9 +20,9 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
                     candidate_outputs_list[i][j][z] = str(i) + "§" + str(j) + "§" + str(z) + "|int|" + str(answer_component)
                 else:
                     candidate_outputs_list[i][j][z] = str(i) + "§" + str(j) + "§" + str(z) + "|" + answer_component
-    '''
+    ```
     in "query_parser" function, after the definition of "candidate_outputs_list" variable. Note that appending operation for "candidate_outputs_lists.txt" file should be useless, since the indexes adding in the following part can be used to get directly the candidate query; in any case, it has been reported for completeness.
-  - '''
+  - ```
     with open(os.environ['lc-quad_output_path'] + "candidate_outputs.txt", "a") as queries_file:
         queries_file.write(str(candidate_outputs) + "\n")
     for i, candidate in enumerate(candidate_outputs):
@@ -32,34 +32,34 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
                 if len(parts) > 2 and parts[1] == "int":
                     parts[-1] = int(parts[-1])
                 candidate_outputs[i][j] = parts[-1]
-    '''
+    ```
     in "query_parser" function, before the final return.
 - "wiki_parser.py" has been modified adding the following code:
-  - '''
+  - ```
     queries_complete_candidates = []
-    '''
+    ```
     in "__call__" function, after the instantiation of the first two lists.
-  - '''
+  - ```
     queries_complete_candidates.append([query[1], query[2]])
-    '''
+    ```
     in "__call__" function, after the instruction "queries_candidates.append(query[1])".
-  - '''
+  - ```
     with open(os.environ['lc-quad_output_path'] + "queries_candidates.txt", "a") as queries_file:
         queries_file.write(str(queries_complete_candidates) + "\n")
-    '''
+    ```
     in "__call__" function, before the return of "query_execute" case.
-  - '''
+  - ```
     if queries_complete_candidates:
         with open(os.environ['lc-quad_output_path'] + "queries_candidates.txt", "a") as queries_file:
             queries_file.write(str(queries_complete_candidates) + "\n")
-    '''
+    ```
     in "__call__" function, before the final return; this part has been added in case "return_if_found" variable is false.
 - "rel_ranking_bert_infer.py" has been modified replacing the instruction
-  '''
+  ```
   answers_with_scores = sorted(answers_with_scores, key=lambda x: x[-1], reverse=True)
-  '''
+  ```
   of "__call__" function with the code
-  '''
+  ```
   answers_with_scores_and_indexes = []
   for i, tuple_answer in enumerate(answers_with_scores):
       answers_with_scores_and_indexes.append((i,) + tuple_answer)
@@ -75,4 +75,4 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
       list_answer = list(tuple_answer)
       del list_answer[0]
       answers_with_scores.append(tuple(list_answer))
-  '''
+  ```
