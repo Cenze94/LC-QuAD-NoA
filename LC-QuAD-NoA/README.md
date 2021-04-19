@@ -4,13 +4,13 @@
 
 ## Execution reproduction
 
-To recreate LC-QuAD-NoA dataset, first of all delete "train_generated.json" and "test_generated.json" files, contained in "dataset" folder. After that, to filter LC-QuAD 2.0 from unanswerable answers, execute the instruction
+To recreate LC-QuAD-NoA dataset, first delete "train_generated.json" and "test_generated.json" files, contained in "dataset" folder. After that, to filter LC-QuAD 2.0 from unanswerable answers, execute the instruction
 
 ```
 python all_ops_generator.py --type "db_filtering"
 ```
 
-to generate the files "train_filtered.json" and "test_filtered.json". Questions have been generating executing a specific instruction for each template type; its generic version is
+to generate the files "train_filtered.json" and "test_filtered.json". Questions have been generated executing a specific instruction for each template type, and saved in files "train_generated.json" and "test_generated.json". The generic version of this function is
 
 ```
 python all_ops_generator.py --type "template_type" --n "total_questions_number"
