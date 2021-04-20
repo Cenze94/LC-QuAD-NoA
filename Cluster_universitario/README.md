@@ -1,6 +1,7 @@
 # Cluster
 
 Python scripts saved here are the same of [Models](Models) folder. For their execution with the Cluster, I created a virtualenv of Python 3.7 with Anaconda, called "py37", installed the libraries of "[requirements](../Models/requirements.txt)", and used the "cluster_long" queue.
+
 For each "job" file, the following information has to be modified:
 
 - email;
