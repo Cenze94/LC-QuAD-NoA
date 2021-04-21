@@ -686,7 +686,7 @@ torch.backends.cudnn.deterministic = True"""
 train_loader, valid_loader, test_loader, test_num_embeddings_list, test_labels_list_per_question = load_lstm_dataset()
 model = LSTM().to(general_settings['device'])
 optimizer = optim.Adam(model.parameters(), lr = 0.0005)
-#train(model = model, optimizer = optimizer, train_loader = train_loader, valid_loader = valid_loader, max_num_epochs = 300, num_stop_epochs = 10)
+train(model = model, optimizer = optimizer, train_loader = train_loader, valid_loader = valid_loader, max_num_epochs = 300, num_stop_epochs = 10)
 #show_plots()
 
 best_model = LSTM().to(general_settings['device'])
