@@ -10,7 +10,7 @@ To recreate LC-QuAD-NoA dataset, first delete "train_generated.json" and "test_g
 python all_ops_generator.py --type "db_filtering"
 ```
 
-to generate the files "train_filtered.json" and "test_filtered.json". Questions have been generated executing a specific instruction for each template type, and saved in files "train_generated.json" and "test_generated.json". The generic version of this instruction is
+to generate the files "train_filtered.json" and "test_filtered.json"; this command may take a few hours to execute. Questions have been generated executing a specific instruction for each template type, and saved in files "train_generated.json" and "test_generated.json". The generic version of this instruction is
 
 ```
 python all_ops_generator.py --type "template_type" --n "total_questions_number"
