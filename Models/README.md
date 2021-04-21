@@ -29,7 +29,7 @@ Since in some of these files there may be multiple lines associated with the sam
 
 ## Statistics file
 
-There are two additional support functions in "check_deeppavlov_model_functions.py": the first one, "filter_test_questions", filters the test set from questions without English answers (if not already done [before](../LC-QuAD-NoA)), while the second one, "add_answers_to_file", adds up to 50 possible answers to the remaining questions of the input set.
+There are two additional support functions in "check_deeppavlov_model_functions.py": the first one, "filter_test_questions", filters the test set from questions without English answers (if not already done [before](../LC-QuAD-NoA#execution-reproduction)), while the second one, "add_answers_to_file", adds up to 50 possible answers to the remaining questions of the input set.
 
 The fields of a statistic file are the following:
 
