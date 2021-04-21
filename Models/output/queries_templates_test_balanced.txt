@@ -1,3 +1,1625 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:91c2735c09e166ce84138a8cdc032fcbd9ab2aeab8830aeffb3dfd1c9908a370
-size 54222
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 ?obj . ?ent wdt:r2 wd:e1 } order by asc(?obj) limit 5
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent . wd:e3 wdt:r3 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 ?x filter(contains(?x, n)) . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 ?x filter(contains(?x, n)) . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent . wd:e3 wdt:r3 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent wdt:r2 wd:e2 . ?ent wdt:r3 wd:e3 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent wdt:r2 wd:e2 . ?ent wdt:r3 wd:e3 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent wdt:r2 wd:e2 . ?ent wdt:r3 wd:e3 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent wdt:r2 wd:e2 . ?ent wdt:r3 wd:e3 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent . wd:e3 wdt:r3 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 ?x filter(contains(?x, n)) . ?s ?p ?value }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 ?x filter(contains(?x, n)) . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+-|-
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 ?x filter(contains(?x, n)) . ?s ?p ?value }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 ?obj . ?ent wdt:r2 wd:e1 } order by asc(?obj) limit 5
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:r1 wd:e1 }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p ?x filter(contains(?x, n)) }
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select (count(?obj) as ?value ) { wd:e1 wdt:r1 ?obj }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?obj where { wd:e1 p:r1 ?s . ?s ps:r1 ?obj . ?s ?p wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 . ?ent wdt:r2 wd:e2 }
+select ?ent where { wd:e1 wdt:r1 ?ent . ?ent ?p wd:e2 }
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+select ?ent where { wd:e1 wdt:r1 ?ent . wd:e2 wdt:r2 ?ent }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+select ?ent where { ?ent wdt:p31 wd:t1 . wd:e1 wdt:r1 ?ent }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { ?ent wdt:p31 wd:t1 . ?ent wdt:r1 wd:e1 }
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+-|-
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
+select ?value where { wd:e1 p:r1 ?s . ?s ps:r1 wd:e2 . ?s ?p ?value }
+-|-
+select ?ent where { wd:e1 wdt:r1 ?ent }
+-|-
