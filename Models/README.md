@@ -14,7 +14,7 @@ line of "load_questions" function of "execute_deeppavlov_model.py". Answers and 
 
 Metrics calculations are performed with the "save_model_accuracy_statistics" function of "check_deeppavlov_model_functions.py" script. It requires three inputs: the balanced test set file directory, the answers document path and the name of the output file, which usually is contained in "data" folder and contains the "statistics" substring. There are three optional inputs, i.e. the list of directories of additional DeepPavlov files (described [here](#details-of-deeppavlov-execution)), the classifier predictions file path and the classifier test set file directory (that is used to find what questions have been fed to the classifier, since the balanced test set file is not the version obtained after the application of embeddings filter). If the optional files are not provided, then by convention each DeepPavlov paper answer, i.e. the answer obtained using the paper method of accuracy calculation, is set to False (not correct), and each prediction is considered False. DeepPavlov files used for this work are already present, except for candidate queries one; it can be downloaded from [here](Models.rar), together with classifiers checkpoints and the test set, already filtered from questions without groundtruth embeddings, with candidate queries DeepPavlov embeddings.
 
-Before executing the dataset filtering of questions without embeddings of at least a groundtruth entity or property, we need to download the [embeddings DB](dataset_embeddings.rar). After that, "preprocess_questions_file" function of "embeddings_filter_dataset.py" script can be executed to apply the filtering and to save additional data for each question, like DeepPavlov candidate queries embeddings. Since the latter requires a lot of memory, train set can be constructed without them, adding an additional substring and a "False" value. Template encodings can be obtained by executing the functions "prepare_encodings" and "save_encodings", passing a "False" value to distinguish the train set from the test set. Finally, we need to get a validation set executing the function "get_validation_set", giving in input also the percentage of validation set questions and a seed.
+Before executing the dataset filtering of questions without embeddings of at least a groundtruth entity or property, we need to download the [embeddings DB](dataset_embeddings.rar). After that, "preprocess_questions_file" function of "embeddings_filter_dataset.py" script can be executed to apply the filtering and to save additional data for each question, like DeepPavlov candidate queries embeddings. Since the latter requires a lot of memory, the train set can be constructed without them, adding an additional substring and a "False" value. Template encodings can be obtained by executing the functions "prepare_encodings" and "save_encodings", passing a "False" value to distinguish the train set from the test set (i.e. to save the groundtruth template encoding instead of DeepPavlov template one). Finally, we need to get a validation set from the training set executing the function "get_validation_set", giving in input also the percentage of validation set questions and a seed.
 
 Classifiers files are contained in "Models" folder. "BERT questions", "BERT questions answers" and "Solution questions embeddings" models have been trained and executed with Colab, using "bert_question/bert_question_tf.ipynb", "bert_question_answer/bert_question_answer_tf.ipynb" and "complex_model/bert_question_embeddings_tf.ipynb" notebooks, respectively. Instead "LSTM embeddings" have been trained and executed with a personal machine with "lstm_embeddings_gold_model/lstm_embeddings_gold_model.py" file. Predictions are saved in a file called "model_predictions.txt", which is contained in the "output" folder of each classifier specific folder. In the end, "check_deeppavlov_model_functions.py" have been executed for every classifier, as described above, in order to get the final results.
 
@@ -23,17 +23,17 @@ Classifiers files are contained in "Models" folder. "BERT questions", "BERT ques
 DeepPavlov model execution creates 6 files that are needed for the next steps; these documents, identified by the substring in quotes, are the following.
 
 - "deeppavlov_answers": contains DeepPavlov model answers;
-- "queries_templates": contains the predicted templates;
+- "queries_templates": is filled with the predicted templates;
 - "queries_candidates": contains all candidate queries;
-- "candidate_outputs_lists": contains the answers of every candidate query; this should be a useless file, since "candidate_outputs" indexes can be used to directly extract the corresponding candidate query, but I reported it anyway because it's created;
+- "candidate_outputs_lists": is filled with the answers of every candidate query; this should be a useless file, since "candidate_outputs" indexes can be used to directly extract the corresponding candidate query, but I reported it anyway because it's created;
 - "candidate_outputs": contains the non-empty answers of candidate queries, with indexes to locate the corresponding one;
-- "answers_indexes": contains the index of final answers, to get them from "candidate_outputs".
+- "answers_indexes": is filled with the index of final answers, to get them from "candidate_outputs".
 
 Since in some of these files there may be multiple lines associated with the same question, "execute_deeppavlov_model.py" adds to all files, for each input question, a new line containing the expression "-|-", which is handled by the scripts of the following steps.
 
 ## Statistics file
 
-There are two additional support functions in "check_deeppavlov_model_functions.py": the first one, "filter_test_questions", filters the test set from questions without English answers (if not already done [before](../LC-QuAD-NoA#execution-reproduction)), while the second one, "add_answers_to_file", adds up to 50 possible answers to the remaining questions of the input set.
+There are two additional support functions in "check_deeppavlov_model_functions.py": the first one, "filter_test_questions", filters the test set from questions without English answers (if not already done [before](../LC-QuAD-NoA#execution-reproduction)), while the second one, "add_answers_to_file", adds up to 50 possible answers to the questions of the input set.
 
 A statistics file contains the information per generation template and in total. Besides there is an additional subdivision, called "without english answers", that contains all the questions without answers with an English label; it is useful if for some reason the dataset filtering fails, and so to handle cases that can cause errors. The fields of the other statistics file subdivisions are the following:
 
@@ -84,7 +84,7 @@ Inside the "models" folder there are 6 different folders:
 
 - "bert_question" contains the files of the model based on BERT and fed with questions;
 - "bert_question_answer" contains the files of the model based on BERT and fed with questions and answers;
-- "complex_model" contains the files of the model based on BERT and LSTM, which inputs are questions, embeddings and templates encoding;
+- "complex_model" contains the files of the model based on BERT and LSTM, which inputs are questions, embeddings and templates encodings;
 - "lstm_embeddings_gold_gold" contains the files of an unofficial model based on LSTM, that is trained and tested with groundtruth embeddings;
 - "lstm_embeddings_gold_model" contains the files of the model based on LSTM, trained with groundtruth embeddings and tested with DeepPavlov candidate queries embeddings;
 - "lstm_embeddings_model_model" contains the files of a sketchy model based on LSTM, that is trained and tested with DeepPavlov candidate queries embeddings.
