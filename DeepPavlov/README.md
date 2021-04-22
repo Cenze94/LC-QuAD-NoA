@@ -1,6 +1,6 @@
 # DeepPavlov modifications
 
-The version of DeepPavlov that I used was 0.14. The corresponding modified files are contained in this folder: Python scripts were pesent in "\home\USER\.local\lib\python3.7\site-packages\deeppavlov\models\kbqa", while "sparql_queries.json" was contained in "\home\USER\.deeppavlov\downloads\wikidata" (a folder generated automatically during the first instantiation of DeepPavlov model). To facilitate the application of the same modifications in case the files will change in future versions of the model, in the following list each change and the reason regarding it are explained.
+The version of DeepPavlov that I used was 0.14. The corresponding modified files are contained in this folder: Python scripts were pesent in "\home\USER\\.local\lib\python3.7\site-packages\deeppavlov\models\kbqa", while "sparql_queries.json" was contained in "\home\USER\\.deeppavlov\downloads\wikidata" (a folder generated automatically during the first instantiation of DeepPavlov model). To facilitate the application of the same modifications in case the files will change in future versions of the model, in the following list each change and the reason regarding it are explained.
 
 - "sparql_queries.json" has been modified because a couple of templates (15 and 18) didn't have the field "define_sorting_order: false", which caused errors if the predicted template of one of the input questions was one of them.
 - "query_generator.py" has been modified adding the following code:
