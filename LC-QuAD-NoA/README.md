@@ -1,6 +1,6 @@
 # LC-QuAD-NoA
 
-"entities_and_properties" folder contains the lists used for difficulty 1 operations. Instead, "dataset" folder contains all dataset files: "train.json" and "test.json" are the original LC-QuAD 2.0 files, while the other documents have been generated from them.
+"entities_and_properties" folder contains the lists used for difficulty 1 operations. Instead "dataset" folder contains all dataset files: "train.json" and "test.json" are the original LC-QuAD 2.0 files, while the other documents have been generated from them.
 
 ## Execution reproduction
 
@@ -10,13 +10,19 @@ To recreate LC-QuAD-NoA dataset, first delete "train_generated.json" and "test_g
 python all_ops_generator.py --type "db_filtering"
 ```
 
-to generate the files "train_filtered.json" and "test_filtered.json"; this command may take a few hours to execute. Questions have been generated executing a specific instruction for each template type, and saved in files "train_generated.json" and "test_generated.json". The generic version of this instruction is
+to generate the files "train_filtered.json" and "test_filtered.json"; this command may take a few hours to execute. Questions have been constructed executing a specific instruction for each template type, and saved in files "train_generated.json" and "test_generated.json". The generic version of this instruction is
 
 ```
-python all_ops_generator.py --type "template_type" --n "total_questions_number"
+python all_ops_generator.py --type template_type --n total_questions_number
 ```
 
-where "template_type" is the generation template name, like "right_subgraph_2", and "total_questions_number" is the total number of questions to generate, divided proportionally between the train and the test set; its default value is 2000, which has been the number used officially. Keep in mind that due to approximation errors, the generated questions will actually be a little less. Besides, generated questions "question" and "paraphrased_question" fields have to be checked and corrected manually, as they often fail to be changed automatically. Finally, with the instruction
+where "template_type" is the generation template name, like "right_subgraph_2", and "total_questions_number" is the total number of questions to generate, divided proportionally between the train and the test set; its default value is 2000, which has been the number used officially. Therefore an example of this instruction is
+
+```
+python all_ops_generator.py --type right_subgraph_2 --n 2000
+```
+
+Keep in mind that due to approximation errors, the generated questions will actually be a little less. Besides, generated questions "question" and "paraphrased_question" fields have to be checked and corrected manually, as they often fail to be changed automatically. Finally, with the instruction
 
 ```
 python all_ops_generator.py --type "create_balanced_dataset"
