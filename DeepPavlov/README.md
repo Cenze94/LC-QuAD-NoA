@@ -38,7 +38,7 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
   - ```
     queries_complete_candidates = []
     ```
-    in "\_\_call__" function, after the instantiation of the first two lists.
+    in "\_\_call__" function, after the instantiation of the first two lists ("wiki_parser_output" and "queries_candidates").
   - ```
     queries_complete_candidates.append([query[1], query[2]])
     ```
