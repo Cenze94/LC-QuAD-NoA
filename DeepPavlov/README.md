@@ -2,7 +2,7 @@
 
 The version of DeepPavlov that I used was 0.14. The corresponding modified files are contained in this folder: Python scripts were pesent in "\home\USER\\.local\lib\python3.7\site-packages\deeppavlov\models\kbqa", while "sparql_queries.json" was contained in "\home\USER\\.deeppavlov\downloads\wikidata" (a folder generated automatically during the first instantiation of DeepPavlov model). To facilitate the application of the same modifications in case the files will change in future versions of the model, in the following list each change and the reason regarding it are explained.
 
-- "sparql_queries.json" has been modified because a couple of templates (15 and 18) didn't have the field "define_sorting_order: false", which caused errors if the predicted template of one of the input questions was one of them.
+- "sparql_queries.json" has been modified because a couple of templates (15 and 18) didn't have the field "define_sorting_order: false", and this could cause errors if the predicted template of one of the input questions was one of them.
 - "query_generator.py" has been modified adding the following code:
   - ```
     import os
@@ -21,7 +21,7 @@ The version of DeepPavlov that I used was 0.14. The corresponding modified files
                 else:
                     candidate_outputs_list[i][j][z] = str(i) + "§" + str(j) + "§" + str(z) + "|" + answer_component
     ```
-    in "query_parser" function, after the definition of "candidate_outputs_list" variable. Note that the appending operation for "candidate_outputs_lists.txt" file should be useless, since the indexes added in the following part can be used to get directly the candidate query; in any case, it has been reported for completeness.
+    in "query_parser" function, after the definition of "candidate_outputs_list" variable. Note that the appending operation for "candidate_outputs_lists.txt" file (first two lines) should be useless, since the indexes added in the following part can be used to get directly the candidate query; in any case, it has been reported for completeness.
   - ```
     with open(os.environ['lc-quad_output_path'] + "candidate_outputs.txt", "a") as queries_file:
         queries_file.write(str(candidate_outputs) + "\n")
